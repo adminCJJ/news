@@ -1,0 +1,172 @@
+<!--<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>欢迎界面</title>
+<style type="text/css">
+		
+    	a{
+    		margin-top:4px;
+    		float:right;
+    		display: block;
+    		text-decoration: none;
+    	}
+    	#logo_right
+    	{
+    		margin-right:5px;
+    		float:right;
+    		width:60;
+			height:75;
+    	}
+		
+		#main
+		{
+			float:left;
+			height:600px;
+			width:1240px;
+		}
+		#main_left
+		{
+			width:215px;
+			float:left;
+			height:600px;
+		}
+		#main_right
+		{
+			width:600px;
+			height:600px;
+			float:right;	
+		}
+		p{
+			padding-top:0px;
+    		margin-top:0px;
+    		font-size: 12px;
+			
+		}
+		header
+		{
+			width:1024px;
+			height:80px;
+		}
+		header img
+		{
+			float:left;
+		}
+		iframe
+		{
+			float:left;
+			width:800px;
+			height:100%;	
+		}
+		footer
+		{
+			float:left;
+			text-align:center;
+			background-color:#FF0;
+			width:1024px;
+			height:25px;
+		}
+		#usersInfo
+		{
+			width:100%;
+			height:150px;
+			background-color:#0FF;
+		}
+		#newsInfo
+		{
+			width:100%;
+			height:200px;
+			background-color:#CFC;
+		}
+		#frontInfo
+		{
+			width:100%;
+			height:250px;
+			background-color:#FFC;
+		}
+		#title{
+			text-align:center;
+			font-size:20px;
+			background-color:#FF9;
+		}
+		.div_right{
+    		float: right;
+    	}
+		li
+		{
+			display:block;
+			list-style:none;
+		}
+		li a
+		{
+			float:none;
+			font-size:16px;}
+    </style>
+</head>
+<!--<frameset rows="84px,*,3%" border="2px solid blue">
+	<frame src="../topLogo.jsp" noresize="noresize" scrolling="no"/>
+	<frameset cols="25%,*">
+		<frameset rows="20%,25%,*">
+			<frame src="../manage/userInfo.jsp" scrolling="no"/>
+			<frame src="../manage/newsInfo.jsp" scrolling="no"/>
+			<frame src="../manage/frontInfo.jsp" scrolling="no"/>
+		</frameset>
+		<frame src="../manage/welcome.jsp" name="iframe"/>
+	</frameset>
+	<frame src="../bottom.jsp" />
+</frameset><noframes></noframes>-->
+<body>
+	<!--页头-->
+    <header>
+        <img src="logo.png" width="400" height="75"/>
+        <div id="logo_right">
+            <a style="cursor: pointer;" href="manage/login.jsp">[首 页]</a>
+            <a style="cursor: pointer;" href="#">[前 台]</a>
+            <a style="cursor: pointer;" href="#">[退 出]</a>
+        </div>
+     </header>
+     <!--版心-->
+     <div id="main">
+         <div id="main_left">
+            <div id="usersInfo">
+                <div id="title">用户信息中心</div>
+                <div id="context">
+                <p>用户名:&nbsp;&nbsp;&nbsp;admin</p>
+                <p>登录时间:&nbsp;&nbsp;2010-11-11 11:11:11</p>
+                <p>登录IP:&nbsp;&nbsp;&nbsp;127.0.0.1</p>
+                    <div id="div_right">
+                        <a href="../servlet/UserServlet?op=logout">[注 销]</a>
+                        <a href="updateUser.jsp" target="iframe">[修改密码]</a>
+                    </div>	
+                </div>
+            </div>
+            <div id="newsInfo">
+                <div id="title">新闻管理中心</div>
+                <ul>
+                    <li><a href="addNews.jsp" target="iframe">发布新闻</a><br/></li>
+                    <li><a href="news.jsp" target="iframe">新闻管理</a><br/></li>
+                    <li><a href="addType.jsp" target="iframe">添加新闻类型</a><br/></li>
+                    <li><a href="type.jsp" target="iframe">新闻类型管理</a><br/></li>
+                </ul>
+            </div>
+            <div id="frontInfo">
+                <div id="title">后台管理中心</div>
+                <ul>
+                    <li><a href="addNews.jsp" target="iframe">关于系统</a><br/></li>
+                    <li><a href="news.jsp" target="iframe">关于用户</a><br/></li>
+                    <li><a href="addType.jsp" target="iframe">关于新闻类型管理</a><br/></li>
+                    <li><a href="type.jsp" target="iframe">关于新闻管理</a><br/></li>
+                    <li><a href="addType.jsp" target="iframe">关于浏览新闻</a><br/></li>
+                </ul>
+            </div>
+         </div>
+         <div id="main_right">
+                <iframe src="#"/>
+         </div>
+     </div>
+    <!--尾眉-->
+    <footer>
+    	<p>校园新闻网&copy;copy 2008-2009</p>
+    </footer>
+</body>
+</html>
